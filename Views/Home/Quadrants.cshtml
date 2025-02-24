@@ -3,7 +3,7 @@
 *@
 @{
 }
-@model List<Task>
+@model List<assignment>
 
 <div class="container">
     <div class="row">
@@ -21,7 +21,7 @@
         <div class="col">
 			<h2><b>Quadrant 1</b></h2>
             <br />
-            @foreach(Task t in Model)
+            @foreach (var t in Model)
             {
             if (t.Quadrant == 1)
             {
@@ -36,7 +36,7 @@
         <div class="col">
 			<h2><b>Quadrant 2</b></h2>
             <br />
-            @foreach (Task t in Model)
+            @foreach (var t in Model)
             {
                 if (t.Quadrant == 2)
                 {
@@ -50,7 +50,7 @@
         <div class="col">
 			<h2><b>Quadrant 3</b></h2>
             <br />
-            @foreach (Task t in Model)
+            @foreach (var t in Model)
             {
                 if (t.Quadrant == 3)
                 {
@@ -61,7 +61,7 @@
         <div class="col">
 			<h2><b>Quadrant 4</b></h2>
             <br />
-            @foreach (Task t in Model)
+            @foreach (var t in Model)
             {
                 if (t.Quadrant == 4)
                 {
