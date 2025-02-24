@@ -3,12 +3,12 @@ using System.ComponentModel.DataAnnotations.Schema;
 
 namespace Mission08Group4_7.Models
 {
-    public class Task
+    public class TaskClass
     {
         [Key]
         public int TaskId { get; set; }
         [Required]
-        public string Name { get; set; }
+        public string TaskName { get; set; }
         public DateTime? DueDate { get; set; }
         [Required]
         public int Quadrant { get; set; }
