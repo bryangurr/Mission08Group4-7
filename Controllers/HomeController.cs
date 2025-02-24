@@ -6,19 +6,20 @@ namespace Mission08Group4_7.Controllers
 {
     public class HomeController : Controller
     {
-        private readonly ILogger<HomeController> _logger;
-
-        public HomeController(ILogger<HomeController> logger)
+        private TaskDbContext _taskContext;
+        public HomeController(TaskDbContext temp)
         {
-            _logger = logger;
+            _taskContext = temp;
         }
-
+        [HttpGet]
         public IActionResult Index()
         {
             return View();
         }
 
-        public IActionResult Privacy()
+
+        [HttpGet]
+        public IActionResult Quadrants()
         {
             return View();
         }
@@ -27,10 +28,6 @@ namespace Mission08Group4_7.Controllers
             return View();
         }
 
-        [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
-        public IActionResult Error()
-        {
-            return View(new ErrorViewModel { RequestId = Activity.Current?.Id ?? HttpContext.TraceIdentifier });
-        }
+
     }
 }
