@@ -25,6 +25,7 @@ namespace Mission08Group4_7.Controllers
         public IActionResult AddTask()
         {
             return View();
+
         }
 
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
