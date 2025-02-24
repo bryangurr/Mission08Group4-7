@@ -7,44 +7,45 @@
 <div class="container mt-5">
     <h1 class="text-center">Enter a Task</h1>
 
+    <form asp-controller="Home" asp-action="Confirmation" method="post">
+        <div class="mb-3">
+            <label class="form-label">Task:</label>
+            <input class="form-control" name="Task" required />
+        </div>
 
-    <div class="mb-3">
-        <label class="form-label">Task:</label>
-        <input class="form-control" />
-    </div>
+        <div class="mb-3">
+            <label class="form-label">Due Date:</label>
+            <input type="date" class="form-control" name="DueDate" required />
+        </div>
 
-    <div class="mb-3">
-        <label class="form-label">Due Date:</label>
-        <input type="date" class="form-control" />
-    </div>
+        <div class="mb-3">
+            <label for="Quadrant" class="form-label">Quadrant:</label>
+            <select class="form-select" name="Quadrant">
+                <option value="1">1 - Important + Urgent</option>
+                <option value="2">2 - Important + Not Urgent</option>
+                <option value="3">3 - Not Important + Urgent</option>
+                <option value="4">4 - Not Important + Not Urgent</option>
+            </select>
+        </div>
 
-    <div class="mb-3">
-        <label for="Quadrant" class="form-label">Quadrant:</label>
-        <select class="form-select">
-            <option value="1">1 - Important + Urgent</option>
-            <option value="2">2 - Important + Not Urgent</option>
-            <option value="3">3 - Not Important + Urgent</option>
-            <option value="4">4 - Not Important + Not Urgent</option>
-        </select>
-    </div>
+        <div class="mb-3">
+            <label for="Category" class="form-label">Category:</label>
+            <select class="form-select" name="Category">
+                <option value="Home">Home</option>
+                <option value="School">School</option>
+                <option value="Work">Work</option>
+                <option value="Completed">Completed</option>
+            </select>
+        </div>
 
-    <div class="mb-3">
-    <label for="Category" class="form-label">Category:</label>
-        <select  class="form-select">
-            <option value="Home">Home</option>
-            <option value="School">School</option>
-            <option value="Work">Work</option>
-            <option value="Completed">Completed</option>
-        </select>
-     </div>
+        <div class="mb-3">
+            <label class="form-label">Completed:</label>
+            <select class="form-select" name="Completed">
+                <option value="true">Yes</option>
+                <option value="false">No</option>
+            </select>
+        </div>
 
-    <div class="mb-3">
-        <label class="form-label">Completed:</label>
-        <select class="form-select">
-            <option value="true">Yes</option>
-            <option value="false">No</option>
-        </select>
-    </div>
-
-    <button type="submit" class="btn btn-primary w-100">Submit Task</button>
+        <button type="submit" class="btn btn-primary w-100">Submit Task</button>
+    </form>
 </div>

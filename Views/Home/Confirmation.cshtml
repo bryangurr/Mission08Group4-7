@@ -1,0 +1,18 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+}
+@{
+    ViewData["Title"] = "Confirmation";
+}
+
+<h2>Task Submitted Successfully!</h2>
+
+<p><strong>Task:</strong> @ViewBag.Task</p>
+<p><strong>Due Date:</strong> @ViewBag.DueDate</p>
+<p><strong>Quadrant:</strong> @ViewBag.Quadrant</p>
+<p><strong>Category:</strong> @ViewBag.Category</p>
+<p><strong>Completed:</strong> @ViewBag.Completed</p>
+
+<a asp-controller="Home" asp-action="Index" class="btn btn-primary">Back to Home</a>

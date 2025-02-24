@@ -27,6 +27,18 @@ namespace Mission08Group4_7.Controllers
             return View();
 
         }
+        [HttpPost]
+        public IActionResult Confirmation(string Task, string DueDate, string Quadrant, string Category, string Completed)
+        {
+            ViewBag.Task = Task;
+            ViewBag.DueDate = DueDate;
+            ViewBag.Quadrant = Quadrant;
+            ViewBag.Category = Category;
+            ViewBag.Completed = Completed;
+
+            return View();
+        }
+
 
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
         public IActionResult Error()
