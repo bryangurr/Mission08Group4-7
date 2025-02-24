@@ -21,13 +21,23 @@ namespace Mission08Group4_7.Controllers
         [HttpGet]
         public IActionResult Quadrants()
         {
-            return View();
+            var tasks = _taskContext.Tasks
+                .Where(x => x.Completed == false)
+                .ToList(); // Load all tasks
+            return View(tasks);
         }
+
+        [HttpGet]
         public IActionResult AddTask()
         {
+            ViewBag.Categories = _taskContext.Categories.ToList(); // Re-populate dropdown list
             return View();
-
         }
+
+
+
+
+
 
 
     }
