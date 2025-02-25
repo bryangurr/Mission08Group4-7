@@ -14,7 +14,7 @@ namespace Mission08Group4_7.Controllers
         [HttpGet]
         public IActionResult Index()
         {
-            return View();
+            return RedirectToAction("Quadrants");
         }
 
 
