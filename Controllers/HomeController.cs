@@ -33,6 +33,18 @@ namespace Mission08Group4_7.Controllers
             ViewBag.Categories = _taskContext.Categories.ToList(); // Re-populate dropdown list
             return View();
         }
+        [HttpPost]
+        public IActionResult Confirmation(string Task, string DueDate, string Quadrant, string Category, string Completed)
+        {
+            ViewBag.Task = Task;
+            ViewBag.DueDate = DueDate;
+            ViewBag.Quadrant = Quadrant;
+            ViewBag.Category = Category;
+            ViewBag.Completed = Completed;
+
+            return View();
+        }
+
 
 
 
