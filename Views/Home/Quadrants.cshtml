@@ -3,7 +3,7 @@
 *@
 @{
 }
-@model List<Task>
+@model List<assignment>
 
 <div class="container">
     <div class="row">
@@ -13,15 +13,15 @@
     </div>
     <div class="row">
         <div class="col-2"></div>
-        <div class="col">Urgent</div>
-        <div class="col">Not Urgent</div>
+		<div class="col"><b>Urgent</b></div>
+		<div class="col"><b>Not Urgent</b></div>
     </div>
     <div class="row">
-        <div class="col-2 d-flex align-items-center justify-content-center text-rotate">Important</div>
+		<div class="col-2 d-flex align-items-center justify-content-center text-rotate"><b>Important</b></div>
         <div class="col">
-            <h2>Quadrant 1</h2>
+			<h2><b>Quadrant 1</b></h2>
             <br />
-            @foreach(Task t in Model)
+            @foreach (var t in Model)
             {
             if (t.Quadrant == 1)
             {
@@ -34,9 +34,9 @@
             }
          </div>
         <div class="col">
-            <h2>Quadrant 2</h2>
+			<h2><b>Quadrant 2</b></h2>
             <br />
-            @foreach (Task t in Model)
+            @foreach (var t in Model)
             {
                 if (t.Quadrant == 2)
                 {
@@ -46,11 +46,11 @@
         </div>
     </div>
     <div class="row">
-        <div class="col-2 d-flex align-items-center justify-content-center text-rotate">Not Important</div>
+		<div class="col-2 d-flex align-items-center justify-content-center text-rotate"><b>Not Important</b></div>
         <div class="col">
-            <h2>Quadrant 3</h2>
+			<h2><b>Quadrant 3</b></h2>
             <br />
-            @foreach (Task t in Model)
+            @foreach (var t in Model)
             {
                 if (t.Quadrant == 3)
                 {
@@ -59,9 +59,9 @@
             }
         </div>
         <div class="col">
-            <h2>Quadrant 4</h2>
+			<h2><b>Quadrant 4</b></h2>
             <br />
-            @foreach (Task t in Model)
+            @foreach (var t in Model)
             {
                 if (t.Quadrant == 4)
                 {
