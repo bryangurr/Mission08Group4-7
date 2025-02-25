@@ -3,7 +3,7 @@
 *@
 @{
 }
-@model List<assignment>
+@model List<TaskClass>
 
 <div class="container">
     <div class="row">
@@ -25,7 +25,7 @@
             {
             if (t.Quadrant == 1)
             {
-                    <p>Task: @t.Name, Due Date: @t.DueDate, Category: @t.Category
+                    <p>Task: @t.TaskName, Due Date: @t.DueDate, Category: @t.Category
                         <a class="btn btn-info" asp-controller="Home" asp-action="Edit" asp-route-id="@t.TaskId">Edit</a>
                         <a class="btn btn-danger" asp-controller="Home" asp-action="Delete" asp-route-id="@t.TaskId">Delete</a>
                     </p>
@@ -40,7 +40,7 @@
             {
                 if (t.Quadrant == 2)
                 {
-                    <p>Task: @t.Name, Due Date: @t.DueDate, Category: @t.Category</p>
+                    <p>Task: @t.TaskName, Due Date: @t.DueDate, Category: @t.Category</p>
                 }
             }
         </div>
@@ -54,7 +54,7 @@
             {
                 if (t.Quadrant == 3)
                 {
-                    <p>Task: @t.Name, Due Date: @t.DueDate, Category: @t.Category</p>
+                    <p>Task: @t.TaskName, Due Date: @t.DueDate, Category: @t.Category</p>
                 }
             }
         </div>
@@ -65,7 +65,7 @@
             {
                 if (t.Quadrant == 4)
                 {
-                    <p>Task: @t.Name, Due Date: @t.DueDate, Category: @t.Category</p>
+                    <p>Task: @t.TaskName, Due Date: @t.DueDate, Category: @t.Category</p>
                 }
             }
         </div>
