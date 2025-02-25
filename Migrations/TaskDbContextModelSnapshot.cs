@@ -54,7 +54,7 @@ namespace Mission08Group4_7.Migrations
                         });
                 });
 
-            modelBuilder.Entity("Mission08Group4_7.Models.Task", b =>
+            modelBuilder.Entity("Mission08Group4_7.Models.TaskClass", b =>
                 {
                     b.Property<int>("TaskId")
                         .ValueGeneratedOnAdd()
@@ -69,12 +69,12 @@ namespace Mission08Group4_7.Migrations
                     b.Property<DateTime?>("DueDate")
                         .HasColumnType("TEXT");
 
-                    b.Property<string>("Name")
-                        .IsRequired()
-                        .HasColumnType("TEXT");
-
                     b.Property<int>("Quadrant")
                         .HasColumnType("INTEGER");
+
+                    b.Property<string>("TaskName")
+                        .IsRequired()
+                        .HasColumnType("TEXT");
 
                     b.HasKey("TaskId");
 
@@ -83,7 +83,7 @@ namespace Mission08Group4_7.Migrations
                     b.ToTable("Tasks");
                 });
 
-            modelBuilder.Entity("Mission08Group4_7.Models.Task", b =>
+            modelBuilder.Entity("Mission08Group4_7.Models.TaskClass", b =>
                 {
                     b.HasOne("Mission08Group4_7.Models.Categories", "Category")
                         .WithMany()

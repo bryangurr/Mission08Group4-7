@@ -7,7 +7,7 @@ namespace Mission08Group4_7.Models
         public TaskDbContext(DbContextOptions<TaskDbContext> options) : base(options)
         {
         }
-        public DbSet<Task> Tasks { get; set; }
+        public DbSet<TaskClass> Tasks { get; set; }
         public DbSet<Categories> Categories { get; set; }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
